@@ -5,7 +5,13 @@ export class Main {
         }
 
         if(this.isAList(name) && name.length > 2){
-            return "Hello, " + name[0] + ", " + name[1] + " and " + name[2] + ".";
+            let txt = "Hello";
+
+            for (let i = 0; i < name.length-1; i++){
+                txt += ", " + name[i];
+            }
+            txt += " and " + name[name.length-1] + ".";
+            return txt;
         }
 
         if(this.isAList(name)){
