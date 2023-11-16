@@ -2,6 +2,7 @@ import { Main } from '../src/app.js';
 
 describe("A suite of test for the hello world greet function of the main class", function() {
     let main = new Main();
+    let list = ["Jill","Jane"];
     
     it("greet function should return 'Hello, Bob' when given 'Bob'", function() {
         let result = main.greet("Bob");
@@ -43,5 +44,11 @@ describe("A suite of test for the hello world greet function of the main class",
         let result = main.greet("BOB");
 
         expect(result).toBe("HELLO, BOB!");
+    });
+
+    it("greet function should return 'Hello, Jill and Jane.' when given a list with 2 name", function() {
+        let result = main.greet(list);
+
+        expect(result).toBe("Hello, Jill and Jane.");
     });
 });
