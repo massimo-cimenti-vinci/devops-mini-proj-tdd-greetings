@@ -5,7 +5,7 @@ export class Main {
             return "Hello, my friend.";
         }
 
-        if(typeof(name) === "object"){
+        if(this.isAList(name)){
             return "Hello, " + name[0] + " and " + name[1] + ".";
         }
 
@@ -21,5 +21,9 @@ export class Main {
 
     isUpperCase(name){
         return name === name.toUpperCase();
+    }
+
+    isAList(list){
+        return typeof(list) === "object";
     }
 }
