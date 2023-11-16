@@ -6,6 +6,9 @@ export class Main {
         if(name === undefined){
             return "Hello, my friend.";
         }
+        if(name === ""){
+            return "Hello, my friend.";
+        }
         return "Hello, " + name + ".";
     }
 }
