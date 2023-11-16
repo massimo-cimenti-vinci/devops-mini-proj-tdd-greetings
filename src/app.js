@@ -5,13 +5,7 @@ export class Main {
         }
 
         if(this.isAList(name) && name.length > 2){
-            let txt = "Hello";
-
-            for (let i = 0; i < name.length-1; i++){
-                txt += ", " + name[i];
-            }
-            txt += " and " + name[name.length-1] + ".";
-            return txt;
+            return this.listToString(name);
         }
 
         if(this.isAList(name)){
@@ -34,5 +28,15 @@ export class Main {
 
     isAList(list){
         return typeof(list) === "object";
+    }
+
+    listToString(name){
+        let txt = "Hello";
+
+        for (let i = 0; i < name.length-1; i++){
+            txt += ", " + name[i];
+        }
+        txt += " and " + name[name.length-1] + ".";
+        return txt
     }
 }
