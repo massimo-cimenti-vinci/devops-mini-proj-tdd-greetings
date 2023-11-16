@@ -38,4 +38,10 @@ describe("A suite of test for the hello world greet function of the main class",
 
         expect(result).toBe("HELLO, BOB!");
     });
+
+    it("greet function should return 'HELLO' + uppercase parameter when given a parameter in uppercase", function() {
+        let result = main.greet("BOB");
+
+        expect(result).toBe("HELLO, BOB!");
+    });
 });
