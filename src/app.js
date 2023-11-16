@@ -5,7 +5,7 @@ export class Main {
         }
 
         if(this.isAList(name) && name.length > 2){
-            return "Hello, Amy, Brian and Charlotte.";
+            return "Hello, " + name[0] + ", " + name[1] + " and " + name[2] + ".";
         }
 
         if(this.isAList(name)){
