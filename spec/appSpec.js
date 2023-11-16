@@ -32,4 +32,10 @@ describe("A suite of test for the hello world greet function of the main class",
 
         expect(result).toBe("Hello, my friend.");
     });
+
+    it("greet function should return 'HELLO, BOB!' when given 'BOB'", function() {
+        let result = main.greet("BOB");
+
+        expect(result).toBe("HELLO, BOB!");
+    });
 });
