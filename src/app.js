@@ -4,13 +4,17 @@ export class Main {
             return "Hello, my friend.";
         }
 
-        if(name === name.toUpperCase()){
-            return "HELLO, " + name.toUpperCase() + "!";
+        if(this.isUpperCase(name)){
+            return "HELLO, " + name + "!";
         }
         return "Hello, " + name + ".";
     }
 
     isInvalidString(name){
         return name === null || name === undefined || name === "";
+    }
+
+    isUpperCase(name){
+        return name === name.toUpperCase();
     }
 }
