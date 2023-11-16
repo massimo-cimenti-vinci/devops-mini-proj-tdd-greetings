@@ -3,6 +3,9 @@ export class Main {
         if(name === null){
             return "Hello, my friend.";
         }
+        if(name === undefined){
+            return "Hello, my friend.";
+        }
         return "Hello, " + name + ".";
     }
 }

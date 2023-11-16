@@ -20,4 +20,10 @@ describe("A suite of test for the hello world greet function of the main class",
 
         expect(result).toBe("Hello, my friend.");
     });
+
+    it("greet function should return 'Hello, my friend ' when given a Undefined", function() {
+        let result = main.greet();
+
+        expect(result).toBe("Hello, my friend.");
+    });
 });
