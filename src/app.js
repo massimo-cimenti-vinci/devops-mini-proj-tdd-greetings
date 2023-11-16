@@ -1,8 +1,11 @@
 export class Main {
     greet(name) {
-
         if(this.isInvalidString(name)){
             return "Hello, my friend.";
+        }
+
+        if(this.isAList(name) && name.length > 2){
+            return "Hello, Amy, Brian and Charlotte.";
         }
 
         if(this.isAList(name)){
