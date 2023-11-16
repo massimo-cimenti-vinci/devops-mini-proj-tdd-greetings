@@ -6,9 +6,8 @@ export class Main {
         }
 
         if(typeof(name) === "object"){
-            return "Hello, Jill and Jane.";
+            return "Hello, " + name[0] + " and " + name[1] + ".";
         }
-
 
         if(this.isUpperCase(name)){
             return "HELLO, " + name + "!";
