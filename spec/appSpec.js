@@ -4,6 +4,7 @@ describe("A suite of test for the hello world greet function of the main class",
     let main = new Main();
     let list = ["Jill","Jane"];
     let listMoreThanTwoNames = ["Amy", "Brian", "Charlotte"];
+    let listMoreThanTwoNamesWithUpperCase = ["Amy", "CHARLOTTE", "Brian"];
     
     it("greet function should return 'Hello, Bob' when given 'Bob'", function() {
         let result = main.greet("Bob");
@@ -57,5 +58,11 @@ describe("A suite of test for the hello world greet function of the main class",
         let result = main.greet(listMoreThanTwoNames);
 
         expect(result).toBe("Hello, Amy, Brian and Charlotte.");
+    });
+
+    it("greet function should return 'Hello, Amy and Brian.AND HELLO CHARLOTTE !' when given a 'Amy','Brian','CHARLOTTE'", function() {
+        let result = main.greet(listMoreThanTwoNamesWithUpperCase);
+
+        expect(result).toBe("Hello, Amy and Brian.AND HELLO CHARLOTTE !");
     });
 });

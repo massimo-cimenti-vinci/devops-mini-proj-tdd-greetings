@@ -1,5 +1,6 @@
 export class Main {
     greet(name) {
+
         if(this.isInvalidString(name)){
             return "Hello, my friend.";
         }
@@ -32,11 +33,27 @@ export class Main {
 
     listToString(name){
         let txt = "Hello";
-
+        let uppercaseName = undefined;
+        
         for (let i = 0; i < name.length-1; i++){
-            txt += ", " + name[i];
+
+            if(this.isUpperCase(name[i])){
+                uppercaseName = name[i];
+                
+                
+            }else{
+                txt += ", " + name[i];
+            }
         }
+
         txt += " and " + name[name.length-1] + ".";
+
+        if(uppercaseName){
+            txt += "AND HELLO " + uppercaseName + " !";
+        }
+        
+        
+        
         return txt
     }
 }
