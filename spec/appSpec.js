@@ -8,4 +8,10 @@ describe("A suite of test for the hello world greet function of the main class",
 
         expect(result).toBe("Hello, Bob");
     });
+
+    it("greet function should return 'Hello' + parameter name when given a paramater", function() {
+        let result = main.greet("Bob");
+
+        expect(result).toBe("Hello, Bob");
+    });
 });
