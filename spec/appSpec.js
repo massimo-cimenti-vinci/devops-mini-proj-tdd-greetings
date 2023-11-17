@@ -66,9 +66,15 @@ describe("A suite of test for the hello world greet function of the main class",
         expect(result).toBe("Hello, Amy and Brian.AND HELLO CHARLOTTE !");
     });
 
-    it("greet function should return 'Bonjour, Marie' when given a 'Marie' and the 'fr' at second parameter", function() {
+    it("greet function should return 'Bonjour, Marie' when given a 'Marie.' and the 'fr' at second parameter", function() {
         let result = main.greet("Marie","fr");
 
-        expect(result).toBe("Bonjour, Marie");
+        expect(result).toBe("Bonjour, Marie.");
+    });
+
+    it("greet function should return 'Hallo, Marie' when given a 'Marie.' and the 'nl' at second parameter", function() {
+        let result = main.greet("Marie","nl");
+
+        expect(result).toBe("Hallo, Marie.");
     });
 });

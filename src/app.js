@@ -8,7 +8,11 @@ export class Main {
         }
 
         if(language === "fr"){
-            return "Bonjour, " + name;
+            return "Bonjour, " + name + ".";
+        }
+        
+        if(language === "nl"){
+            return "Hallo, " + name + ".";
         }
 
         if(this.isAList(name) && name.length > 2){
