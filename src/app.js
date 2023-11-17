@@ -7,11 +7,11 @@ export class Main {
             return "Hello, my friend.";
         }
 
-        if(language === "fr"){
+        if(this.isFr(language)){
             return "Bonjour, " + name + ".";
         }
         
-        if(language === "nl"){
+        if(this.isNl(language)){
             return "Hallo, " + name + ".";
         }
 
@@ -65,5 +65,13 @@ export class Main {
         
         
         return txt
+    }
+
+    isFr(language){
+        return language === "fr";
+    }
+
+    isNl(language){
+        return language === "nl"
     }
 }
