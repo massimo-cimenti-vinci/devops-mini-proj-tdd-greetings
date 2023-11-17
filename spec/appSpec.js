@@ -49,19 +49,19 @@ describe("A suite of test for the hello world greet function of the main class",
     });
 
     it("greet function should return 'Hello, ' + 1st name of list + ' and ' + 2nd name of list + when given a list with 2 name", function() {
-        let result = main.greet(list);
+        let result = main.greet(list,"en");
 
         expect(result).toBe("Hello, Jill and Jane.");
     });
 
     it("greet function should return 'Hello, ..., ..., ... and ...' when given a list with more than 2 names", function() {
-        let result = main.greet(listMoreThanTwoNames);
+        let result = main.greet(listMoreThanTwoNames,"en");
 
         expect(result).toBe("Hello, Amy, Brian and Charlotte.");
     });
 
     it("greet function should return 'Hello, Amy and Brian.AND HELLO CHARLOTTE !' when given a 'Amy','Brian','CHARLOTTE'", function() {
-        let result = main.greet(listMoreThanTwoNamesWithUpperCase);
+        let result = main.greet(listMoreThanTwoNamesWithUpperCase,"en");
 
         expect(result).toBe("Hello, Amy and Brian.AND HELLO CHARLOTTE !");
     });
@@ -78,15 +78,17 @@ describe("A suite of test for the hello world greet function of the main class",
         expect(result).toBe("Hallo, Marie.");
     });
 
-    it("greet function should return 'Bonjour, Jill et Jane' when given a list and the 'fr' at second parameter", function() {
+    it("greet function should return 'Bonjour, Jill et Jane' when given a list of 2 String and the 'fr' at second parameter", function() {
         let result = main.greet(list,"fr");
 
         expect(result).toBe("Bonjour, Jill et Jane.");
     });
 
-    it("greet function should return 'Hallo, Jill et Jane' when given a list and the 'nl' at second parameter", function() {
+    it("greet function should return 'Hallo, Jill et Jane' when given a list of 2 String and the 'nl' at second parameter", function() {
         let result = main.greet(list,"nl");
 
         expect(result).toBe("Hallo, Jill en Jane.");
     });
+
+    
 });
