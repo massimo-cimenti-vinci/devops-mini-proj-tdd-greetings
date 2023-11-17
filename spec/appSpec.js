@@ -83,4 +83,10 @@ describe("A suite of test for the hello world greet function of the main class",
 
         expect(result).toBe("Bonjour, Jill et Jane.");
     });
+
+    it("greet function should return 'Hallo, Jill et Jane' when given a list and the 'nl' at second parameter", function() {
+        let result = main.greet(list,"nl");
+
+        expect(result).toBe("Hallo, Jill en Jane.");
+    });
 });
