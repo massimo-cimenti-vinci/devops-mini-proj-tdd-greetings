@@ -1,36 +1,36 @@
-export class Main {
-    greet(name) {
-        if(this.isInvalidString(name)){
+
+    function greet(name) {
+        if(isInvalidString(name)){
             return "Hello, my friend.";
         }
 
-        if(this.isAList(name) && name.length > 2){
-            return this.listToString(name);
+        if(isAList(name) && name.length > 2){
+            return listToString(name);
         }
 
-        if(this.isAList(name)){
+        if(isAList(name)){
             return "Hello, " + name[0] + " and " + name[1] + ".";
         }
 
-        if(this.isUpperCase(name)){
+        if(isUpperCase(name)){
             return "HELLO, " + name + "!";
         }
         return "Hello, " + name + ".";
     }
 
-    isInvalidString(name){
+    function isInvalidString(name){
         return name === null || name === undefined || name === "";
     }
 
-    isUpperCase(name){
+    function isUpperCase(name){
         return name === name.toUpperCase();
     }
 
-    isAList(list){
+    function isAList(list){
         return typeof(list) === "object";
     }
 
-    listToString(name){
+    function listToString(name){
         let txt = "Hello";
 
         for (let i = 0; i < name.length-1; i++){
@@ -39,4 +39,5 @@ export class Main {
         txt += " and " + name[name.length-1] + ".";
         return txt
     }
-}
+
+    module.exports = { greet };
