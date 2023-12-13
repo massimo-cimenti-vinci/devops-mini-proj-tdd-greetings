@@ -1,4 +1,4 @@
-
+const { describe, test, expect } = require('@jest/globals');
 const main = require('../src/app');
 
 describe('A suite of test for the hello world greet function of the main class', function () {
