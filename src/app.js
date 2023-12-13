@@ -1,59 +1,53 @@
-export class Main {
-    greet(name) {
+function greet (name) {
+  if (isInvalidString(name)) {
+    return 'Hello, my friend.';
+  }
 
-        if(this.isInvalidString(name)){
-            return "Hello, my friend.";
-        }
+  if (isAList(name) && name.length > 2) {
+    return listToString(name);
+  }
 
-        if(this.isAList(name) && name.length > 2){
-            return this.listToString(name);
-        }
+  if (isAList(name)) {
+    return 'Hello, ' + name[0] + ' and ' + name[1] + '.';
+  }
 
-        if(this.isAList(name)){
-            return "Hello, " + name[0] + " and " + name[1] + ".";
-        }
-
-        if(this.isUpperCase(name)){
-            return "HELLO, " + name + "!";
-        }
-        return "Hello, " + name + ".";
-    }
-
-    isInvalidString(name){
-        return name === null || name === undefined || name === "";
-    }
-
-    isUpperCase(name){
-        return name === name.toUpperCase();
-    }
-
-    isAList(list){
-        return typeof(list) === "object";
-    }
-
-    listToString(name){
-        let txt = "Hello";
-        let uppercaseName = undefined;
-        
-        for (let i = 0; i < name.length-1; i++){
-
-            if(this.isUpperCase(name[i])){
-                uppercaseName = name[i];
-                
-                
-            }else{
-                txt += ", " + name[i];
-            }
-        }
-
-        txt += " and " + name[name.length-1] + ".";
-
-        if(uppercaseName){
-            txt += "AND HELLO " + uppercaseName + " !";
-        }
-        
-        
-        
-        return txt
-    }
+  if (isUpperCase(name)) {
+    return 'HELLO, ' + name + '!';
+  }
+  return 'Hello, ' + name + '.';
 }
+
+function isInvalidString (name) {
+  return name === null || name === undefined || name === '';
+}
+
+function isUpperCase (name) {
+  return name === name.toUpperCase();
+}
+
+function isAList (list) {
+  return typeof list === 'object';
+}
+
+function listToString (name) {
+  let txt = 'Hello';
+  let uppercaseName;
+
+  for (let i = 0; i < name.length - 1; i++) {
+    if (isUpperCase(name[i])) {
+      uppercaseName = name[i];
+    } else {
+      txt += ', ' + name[i];
+    }
+  }
+
+  txt += ' and ' + name[name.length - 1] + '.';
+
+  if (uppercaseName) {
+    txt += 'AND HELLO ' + uppercaseName + ' !';
+  }
+
+  return txt;
+}
+
+module.exports = { greet };
