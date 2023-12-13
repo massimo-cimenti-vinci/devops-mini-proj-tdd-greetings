@@ -1,4 +1,4 @@
-function greet (name) {
+function greet(name) {
   if (isInvalidString(name)) {
     return 'Hello, my friend.';
   }
@@ -17,19 +17,19 @@ function greet (name) {
   return 'Hello, ' + name + '.';
 }
 
-function isInvalidString (name) {
+function isInvalidString(name) {
   return name === null || name === undefined || name === '';
 }
 
-function isUpperCase (name) {
+function isUpperCase(name) {
   return name === name.toUpperCase();
 }
 
-function isAList (list) {
+function isAList(list) {
   return typeof list === 'object';
 }
 
-function listToString (name) {
+function listToString(name) {
   let txt = 'Hello';
   let uppercaseName;
 
