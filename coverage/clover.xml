@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1702487117811" clover="3.2.0">
-  <project timestamp="1702487117811" name="All files">
+<coverage generated="1702501980851" clover="3.2.0">
+  <project timestamp="1702501980851" name="All files">
     <metrics statements="22" coveredstatements="20" conditionals="17" coveredconditionals="15" methods="5" coveredmethods="5" elements="44" coveredelements="40" complexity="0" loc="22" ncloc="22" packages="1" files="1" classes="1"/>
     <file name="app.js" path="C:\Users\masci\Documents\Nouveau dossier\devops-mini-proj-tdd-greetings\src\app.js">
       <metrics statements="22" coveredstatements="20" conditionals="17" coveredconditionals="15" methods="5" coveredmethods="5"/>
