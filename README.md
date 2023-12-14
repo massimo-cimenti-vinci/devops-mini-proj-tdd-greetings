@@ -59,7 +59,7 @@ Le fichier yml définit un workflow qui sera déclenché a chaque Merge request 
 - Quelle est la différence entre run et run_on ? Expliquez par rapport à votre pipeline.
 
 ```bash
-<votre réponse ici>
+Le run_on permet de spécifié l'environnement d'exécution du job, ici cela ce fera sur la dernière version d'Unbuntu. Tandis que run permet d'éxécuter une commande par exemple: npm run prettier
 ```
 
 - Quelle est la différence entre “use” et “run”. Expliquez par rapport à votre pipeline.
