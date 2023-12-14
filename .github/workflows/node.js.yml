@@ -43,7 +43,5 @@ jobs:
       - name: PIPELINE SUCCESS WITHOUT ERRORS
         run: echo "PIPELINE SUCCESS WITHOUT ERRORS"
 
-      
-
       - name: Display end hour
         run: echo "The pipeline has ended at $(TZ='Europe/Brussels' date +'%H:%M:%S')"
