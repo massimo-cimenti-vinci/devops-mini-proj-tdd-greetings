@@ -38,5 +38,5 @@ jobs:
       - name: PIPELINE SUCCESS WITHOUT ERRORS
         run: echo "PIPELINE SUCCESS WITHOUT ERRORS"
 
-      - name: afficher heure fin
-        run: echo "$(date +'%H:%M:%S')"
+      - name: Display end hour
+        run: echo "$(TZ='Europe/Brussels' date +'%H:%M')"
