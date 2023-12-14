@@ -23,17 +23,17 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - name: build the project    
+      - name: build the project
         run: npm ci
 
-      - name : run prettier
+      - name: run prettier
         run: npm run prettier
 
-      - name: run lint  
+      - name: run lint
         run: npm run lint
 
-      - name : run test  
+      - name: run test
         run: npm run test
-        
+
       - name: PIPELINE SUCCESS WITHOUT ERRORS
         run: echo "PIPELINE SUCCESS WITHOUT ERRORS"
