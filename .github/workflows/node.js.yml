@@ -17,6 +17,9 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+      - name: Display begin hour
+        run: echo "The pipeline has began at $(TZ='Europe/Brussels' date +'%H:%M:%S')"
+
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
@@ -39,4 +42,4 @@ jobs:
         run: echo "PIPELINE SUCCESS WITHOUT ERRORS"
 
       - name: Display end hour
-        run: echo "$(TZ='Europe/Brussels' date +'%H:%M')"
+        run: echo "The pipeline has ended at $(TZ='Europe/Brussels' date +'%H:%M:%S')"
