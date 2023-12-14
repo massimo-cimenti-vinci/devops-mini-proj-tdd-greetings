@@ -53,7 +53,7 @@ Le fichier yml définit un workflow qui sera déclenché a chaque Merge request 
 - En particulier : à quoi sert le “on” ? dans votre fichier YML ? Quelle est la différence entre “on push” et “on pull request”. Que conseilleriez-vous comme option parmi ces 2 options à un groupe de développeurs junior ? Pourquoi ?
 
 ```bash
-Le "on"  sert à spécifier les événements déclencheurs qui seront faites sur notre workflow. L'événement déclencheur "on push" va lancer la pipeline lorsqu'on push notre code alors que "on pull request" lance la pipeline lorsqu'on ouvre, met à jour ou on ferme une pull request et que quelqu'un valide les changements de code avant de fusionner les branches. L'événement "on pull request" est le mieux pour des développeurs juniors car il oblige de faire vérifier le code par un memebre de l'équipe avant de fusionner et de prendre des risques en cassant le code.
+Le "on" sert à spécifier les événements déclencheurs qui seront faites sur notre workflow. L'événement déclencheur "on push" va lancer le pipeline lorsqu'on push notre code alors que "on pull request" lance le pipeline lorsqu'on ouvre, met à jour ou on ferme une pull request et que quelqu'un valide les changements de code avant de fusionner les branches. L'événement "on pull request" est le mieux pour des développeurs juniors car il oblige de faire vérifier le code par un des membres de l'équipe avant de fusionner et de prendre des risques en cassant le code.
 ```
 
 - Quelle est la différence entre run et run_on ? Expliquez par rapport à votre pipeline.
@@ -72,11 +72,11 @@ Le run permet d'éxécuter des commandes pour build le projet par exemple.
 - Peut-on intervertir différentes étapes dans votre pipeline ? Que votre réponse soit oui ou non, expliquez par rapport à votre pipeline.
 
 ```bash
-<votre réponse ici>
+Non, dans notre cas on ne peut pas intervertir les étapes de notre pipeline car si par exemple on veut vérifier notre code avec le prettier et le lint, on doit d'abord installer les dépendances de ceux-ci pour que ça marche sinon le pipeline mettra une erreur et s'arrêtera de s'exécuter.
 ```
 
 - Je veux ajouter un test de sécurité sur mon pipeline en exécutant le programme secure_app. Que devrais-je faire ? Quelles questions devriez-vous vous poser ?
 
 ```bash
-<votre réponse ici>
+Il faudrait savoir si le test a besoin d'une étape du pipeline pour l'ajouter au bon endroit, savoir comment le pipeline agira si il y a des erreurs, savoir quels types de sécurité dois-je effectuer.
 ```
