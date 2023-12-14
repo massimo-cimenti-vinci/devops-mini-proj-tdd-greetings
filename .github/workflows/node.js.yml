@@ -37,3 +37,6 @@ jobs:
 
       - name: PIPELINE SUCCESS WITHOUT ERRORS
         run: echo "PIPELINE SUCCESS WITHOUT ERRORS"
+
+      - name: afficher heure fin
+        run: echo date
