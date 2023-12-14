@@ -47,25 +47,26 @@ Liens utiles:
 - Décrivez brièvement ce que fait votre fichier YML.
 
 ```bash
-Le fichier yml définit un workflow qui sera déclenché a chaque Merge request / Pull request vers la branche main, une série de test seront alors lancé sur un système d'exploitation Unbuntu avec Node.js 16 et 18 dans notre cas il installe les dépendances, test le code, le coverage, prettier, lint et le build
+Le fichier yml définit un workflow qui sera déclenché a chaque Merge request / Pull request vers la branche main, une série de test seront alors lancé sur un système d'exploitation Unbuntu avec Node.js 16 et 18 dans notre cas il installe les dépendances, test le code, le coverage, prettier, lint et le build.
 ```
 
 - En particulier : à quoi sert le “on” ? dans votre fichier YML ? Quelle est la différence entre “on push” et “on pull request”. Que conseilleriez-vous comme option parmi ces 2 options à un groupe de développeurs junior ? Pourquoi ?
 
 ```bash
-<votre réponse ici>
+Le "on"  sert à spécifier les événements déclencheurs qui seront faites sur notre workflow. L'événement déclencheur "on push" va lancer la pipeline lorsqu'on push notre code alors que "on pull request" lance la pipeline lorsqu'on ouvre, met à jour ou on ferme une pull request et que quelqu'un valide les changements de code avant de fusionner les branches. L'événement "on pull request" est le mieux pour des développeurs juniors car il oblige de faire vérifier le code par un memebre de l'équipe avant de fusionner et de prendre des risques en cassant le code.
 ```
 
 - Quelle est la différence entre run et run_on ? Expliquez par rapport à votre pipeline.
 
 ```bash
-Le run_on permet de spécifié l'environnement d'exécution du job, ici cela ce fera sur la dernière version d'Unbuntu. Tandis que run permet d'éxécuter une commande par exemple: npm run prettier
+Le run_on permet de spécifié l'environnement d'exécution du job, ici cela ce fera sur la dernière version d'Unbuntu. Tandis que run permet d'éxécuter une commande par exemple: npm run prettier.
 ```
 
 - Quelle est la différence entre “use” et “run”. Expliquez par rapport à votre pipeline.
 
 ```bash
-<votre réponse ici>
+Dans notre cas use permet de sélectionner une certaine version de actions/checkout, le uses: actions/checkout@v3 permet de choisir la v3. Le use est principalement utilisé pour spécifier des actions externes que l'on souhaite utiliser dans le workflow.
+Le run permet d'éxécuter des commandes pour build le projet par exemple.
 ```
 
 - Peut-on intervertir différentes étapes dans votre pipeline ? Que votre réponse soit oui ou non, expliquez par rapport à votre pipeline.
