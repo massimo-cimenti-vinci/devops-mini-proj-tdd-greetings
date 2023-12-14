@@ -55,6 +55,6 @@ describe('A suite of test for the hello world greet function of the main class',
   test("greet function should return 'Hello, ..., ..., ... and ...' when given a list wtesth more than 2 names", () => {
     const result = main.greet(listMoreThanTwoNames);
 
-    expect(result).toBe('Hello, Amy, Brian and CharlotteA.');
+    expect(result).toBe('Hello, Amy, Brian and Charlotte.');
   });
 });
