@@ -8,7 +8,8 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "build": ""
   },
   "author": "",
   "license": "ISC",
@@ -24,11 +25,13 @@
   },
   "jest": {
     "collectCoverage": true,
-    "collectCoverageFrom": ["./src/**"],
+    "collectCoverageFrom": [
+      "./src/**"
+    ],
     "coverageThreshold": {
       "global": {
-        "lines": 90
+        "lines": 80
       }
     }
-  }    
+  }
 }

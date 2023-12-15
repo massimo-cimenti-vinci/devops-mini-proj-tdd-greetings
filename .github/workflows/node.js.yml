@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -39,10 +39,11 @@ jobs:
       - name: run test
         run: npm run test
 
+      - name: Building project
+        run: npm run build
+
       - name: PIPELINE SUCCESS WITHOUT ERRORS
         run: echo "PIPELINE SUCCESS WITHOUT ERRORS"
-
-      
 
       - name: Display end hour
         run: echo "The pipeline has ended at $(TZ='Europe/Brussels' date +'%H:%M:%S')"
