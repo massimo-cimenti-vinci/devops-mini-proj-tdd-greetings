@@ -6,6 +6,7 @@ Travail de recherche , mettre en place de l'integration continue avec les GitHub
 
 - N° de groupe : 1
 - Membres du groupe : Cimenti Massimo, Dewilde Sébastien
+- lien du repos : https://github.com/massimo-cimenti-vinci/devops-mini-proj-tdd-greetings.git
 
 ## Énoncé
 
