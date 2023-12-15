@@ -9,7 +9,7 @@
     "prettier:fix": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "build": ""
+    "build": "webpack ./src/** -o dist/"
   },
   "author": "",
   "license": "ISC",
