@@ -73,7 +73,7 @@ Le run permet d'éxécuter des commandes pour build le projet par exemple.
 - Peut-on intervertir différentes étapes dans votre pipeline ? Que votre réponse soit oui ou non, expliquez par rapport à votre pipeline.
 
 ```bash
-Non, dans notre cas on ne peut pas intervertir les étapes de notre pipeline car si par exemple on veut vérifier notre code avec le prettier et le lint, on doit d'abord installer les dépendances de ceux-ci pour que ça marche sinon le pipeline mettra une erreur et s'arrêtera de s'exécuter.
+Non, dans notre cas on ne peut pas intervertir les étapes de notre pipeline car si par exemple on veut vérifier notre code avec le prettier et le lint, on doit d'abord installer les dépendances de ceux-ci pour que ça fonctionne sinon le pipeline mettra une erreur et s'arrêtera de s'exécuter.
 ```
 
 - Je veux ajouter un test de sécurité sur mon pipeline en exécutant le programme secure_app. Que devrais-je faire ? Quelles questions devriez-vous vous poser ?
